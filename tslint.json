@@ -6,7 +6,6 @@
 		"max-classes-per-file": false,
 		"no-console": false,
 		"no-shadowed-variable": false,
-		"no-var-requires": false,
-		"quotemark": false
+		"no-var-requires": false
 	}
 }
