@@ -1,8 +1,10 @@
 import * as React from "react";
 import * as ReactDOM from "react-dom";
+import { Provider } from "react-redux";
 import { injectGlobal } from "styled-components";
 
 import App from "./components/App";
+import createStore from "./state";
 
 injectGlobal`
     body {
@@ -20,4 +22,10 @@ injectGlobal`
     }
 `;
 
-ReactDOM.render(<App />, document.getElementById("root"));
+const store = createStore();
+
+ReactDOM.render(
+    <Provider store={store}>
+        <App />
+    </Provider>,
+    document.getElementById("root"));
