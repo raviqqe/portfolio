@@ -16,9 +16,13 @@ const Button = styled.button`
 `;
 
 const Icon = styled.div`
+    font-size: 1.5em;
+    line-height: 0;
+    margin-right: 0.1em;
 `;
 
 const Label = styled.div`
+    margin-right: 0.2em;
     text-transform: capitalize;
 `;
 
