@@ -1,10 +1,10 @@
 import * as React from "react";
 import * as ReactDOM from "react-dom";
 
-import Content from "../Content";
+import Page from "../Page";
 
 test("Render a component", () => {
     ReactDOM.render(
-        <Content title="Works" subtitle="good work." >a statue</Content>,
+        <Page title="Works" subtitle="good work." >a statue</Page>,
         document.createElement("div"));
 });
