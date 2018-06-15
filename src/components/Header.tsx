@@ -14,19 +14,14 @@ const Description = styled.div`
     font-size: 1.2em;
 `;
 
-interface IProps {
-    description: string;
-    name: string;
-}
-
-export default class extends React.Component<IProps> {
+export default class extends React.Component {
     public render() {
-        const { description, name } = this.props;
-
         return (
             <Header>
-                <Name>{name}</Name>
-                <Description>{description}</Description>
+                <Name>Yota Toyama</Name>
+                <Description>
+                    Full-stack developer and AI enthusiast.
+                </Description>
             </Header>
         );
     }
