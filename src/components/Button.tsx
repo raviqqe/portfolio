@@ -36,12 +36,7 @@ export default class extends React.Component<IProps> {
         const { children, icon, onClick } = this.props;
 
         return (
-            <Button
-                onClick={(event) => {
-                    onClick();
-                    event.stopPropagation();
-                }}
-            >
+            <Button onClick={onClick}>
                 <Icon>{icon}</Icon>
                 <Label>{children}</Label>
             </Button>
