@@ -9,6 +9,8 @@ const Button = styled.button`
 
     padding: 0.5em 1em;
 
+    font: inherit;
+    font-size: 1.2em;
     color: black;
     background: transparent;
     border: 2px solid black;
@@ -18,7 +20,7 @@ const Button = styled.button`
 const Icon = styled.div`
     font-size: 1.5em;
     line-height: 0;
-    margin-right: 0.1em;
+    margin-right: 0.2em;
 `;
 
 const Label = styled.div`

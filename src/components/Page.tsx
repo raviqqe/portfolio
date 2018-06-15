@@ -1,21 +1,32 @@
 import * as React from "react";
 import styled from "styled-components";
 
-const Content = styled.div`
+import { horizontalMargin, verticalMargin } from "../style";
+
+const Page = styled.div`
+    ${verticalMargin("0.5em")}
     border: 2px solid black;
+    flex: 1;
+    padding: 1em 1.5em;
 `;
 
 const Titles = styled.div`
+    ${horizontalMargin("1em")}
     display: flex;
     align-items: flex-end;
 `;
 
 const Title = styled.h2`
     font-size: 2em;
+    margin: 0;
 `;
 
 const Subtitle = styled.div`
     font-size: 1.2em;
+    margin-bottom: 0.4em;
+`;
+
+const Content = styled.div`
 `;
 
 interface IProps {
@@ -28,13 +39,15 @@ export default class extends React.Component<IProps> {
         const { children, title, subtitle } = this.props;
 
         return (
-            <Content>
+            <Page>
                 <Titles>
                     <Title>{title}</Title>
                     <Subtitle>{subtitle}</Subtitle>
                 </Titles>
-                {children}
-            </Content>
+                <Content>
+                    {children}
+                </Content>
+            </Page>
         );
     }
 }

@@ -6,9 +6,11 @@ import Rocket = require("react-icons/lib/fa/rocket");
 import styled from "styled-components";
 
 import { Page } from "../domain";
+import { verticalMargin } from "../style";
 import PageButton from "./PageButton";
 
 const PageButtons = styled.div`
+    ${verticalMargin("0.5em")}
     display: flex;
     flex-direction: column;
 `;
