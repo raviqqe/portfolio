@@ -9,7 +9,7 @@ import { Page } from "../domain";
 import { verticalMargin } from "../style";
 import PageButton from "./PageButton";
 
-const PageButtons = styled.div`
+const Menu = styled.div`
     ${verticalMargin("0.5em")}
     display: flex;
     flex-direction: column;
@@ -18,12 +18,12 @@ const PageButtons = styled.div`
 export default class extends React.Component {
     public render() {
         return (
-            <PageButtons>
+            <Menu>
                 <PageButton icon={<Cubes />} page={Page.Works} />
                 <PageButton icon={<GitHub />} page={Page.Contribution} />
                 <PageButton icon={<Book />} page={Page.Study} />
                 <PageButton icon={<Rocket />} page={Page.Story} />
-            </PageButtons>
+            </Menu>
         );
     }
 }

@@ -1,8 +1,8 @@
 import { shallow } from "enzyme";
 import * as React from "react";
 
-import PageButtons from "../PageButtons";
+import Menu from "../Menu";
 
 test("Render a component", () => {
-    shallow(<PageButtons />);
+    shallow(<Menu />);
 });

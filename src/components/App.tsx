@@ -7,7 +7,7 @@ import * as page from "../state/page";
 import { horizontalMargin } from "../style";
 import ContributionPage from "./ContributionPage";
 import Header from "./Header";
-import PageButtons from "./PageButtons";
+import Menu from "./Menu";
 import StoryPage from "./StoryPage";
 import StudyPage from "./StudyPage";
 import WorksPage from "./WorksPage";
@@ -33,7 +33,7 @@ export default class extends React.Component<Partial<page.IState>> {
             <App>
                 <Header />
                 <Content>
-                    <PageButtons />
+                    <Menu />
                     {{
                         [Page.Contribution]: <ContributionPage />,
                         [Page.Story]: <StoryPage />,
