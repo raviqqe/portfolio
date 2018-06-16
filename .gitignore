@@ -1,6 +1,5 @@
 *.js
 *.log
-*.png
 build
 coverage
 node_modules
