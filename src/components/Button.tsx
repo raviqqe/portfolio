@@ -10,7 +10,7 @@ const Button = styled.button`
     padding: 0.5em 1em;
 
     font: inherit;
-    font-size: 1.2em;
+    font-size: 1.1em;
     color: black;
     background: transparent;
     border: 2px solid black;
