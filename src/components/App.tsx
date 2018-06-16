@@ -2,10 +2,14 @@ import * as React from "react";
 import { connect } from "react-redux";
 import styled from "styled-components";
 
-import * as domain from "../domain";
+import { Page } from "../domain";
+import * as page from "../state/page";
 import { horizontalMargin } from "../style";
+import ContributionPage from "./ContributionPage";
 import Header from "./Header";
 import PageButtons from "./PageButtons";
+import StoryPage from "./StoryPage";
+import StudyPage from "./StudyPage";
 import WorksPage from "./WorksPage";
 
 const App = styled.div`
@@ -23,14 +27,19 @@ const Content = styled.div`
 `;
 
 @connect(({ page }) => page)
-export default class extends React.Component {
+export default class extends React.Component<Partial<page.IState>> {
     public render() {
         return (
             <App>
                 <Header />
                 <Content>
                     <PageButtons />
-                    <WorksPage />
+                    {{
+                        [Page.Contribution]: <ContributionPage />,
+                        [Page.Story]: <StoryPage />,
+                        [Page.Study]: <StudyPage />,
+                        [Page.Works]: <WorksPage />,
+                    }[this.props.page]}
                 </Content>
             </App>
         );
