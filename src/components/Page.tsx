@@ -19,6 +19,7 @@ const Titles = styled.div`
 const Title = styled.h2`
     font-size: 2em;
     margin: 0;
+    text-transform: capitalize;
 `;
 
 const Subtitle = styled.div`
