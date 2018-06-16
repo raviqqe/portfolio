@@ -11,14 +11,16 @@ const Page = styled.div`
 `;
 
 const Titles = styled.div`
-    ${horizontalMargin("1em")}
+    ${horizontalMargin("0.6em")}
     display: flex;
+    flex-wrap: wrap;
     align-items: flex-end;
 `;
 
 const Title = styled.h2`
     font-size: 2em;
-    margin: 0;
+    margin-top: 0;
+    margin-bottom: 0;
     text-transform: capitalize;
 `;
 

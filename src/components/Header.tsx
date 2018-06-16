@@ -4,16 +4,17 @@ import styled from "styled-components";
 import { horizontalMargin } from "../style";
 
 const Header = styled.div`
-    ${horizontalMargin("1em")}
+    ${horizontalMargin("0.5em")}
     display: flex;
     align-items: flex-end;
+    flex-wrap: wrap;
     padding: 1em 1.5em;
 `;
 
 const Name = styled.h1`
     font-size: 4em;
-    margin: 0;
-    padding: 0;
+    margin-top: 0;
+    margin-bottom: 0;
 `;
 
 const Description = styled.div`

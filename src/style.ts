@@ -25,10 +25,10 @@ injectGlobal`
 export function verticalMargin(margin: string): InterpolationValue[] {
     return css`
         > * {
-            margin-top: ${margin};
+            margin-bottom: ${margin};
 
-            &:first-child {
-                margin-top: 0;
+            &:last-child {
+                margin-bottom: 0;
             }
         }
     `;
@@ -37,10 +37,10 @@ export function verticalMargin(margin: string): InterpolationValue[] {
 export function horizontalMargin(margin: string): InterpolationValue[] {
     return css`
         > * {
-            margin-left: ${margin};
+            margin-right: ${margin};
 
-            &:first-child {
-                margin-left: 0;
+            &:last-child {
+                margin-right: 0;
             }
         }
     `;
