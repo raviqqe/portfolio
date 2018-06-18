@@ -2,26 +2,26 @@ import * as React from "react";
 import styled from "styled-components";
 
 const Image = styled.img`
-    width: ${({ width }) => width || "100%"};
-    object-fit: cover;
+    height: ${({ height }) => height || "100%"};
+    object-fit: contain;
 `;
 
-const Link = styled.a<{ width?: string }>`
-    width: ${({ width }) => width || "initial"};
+const Link = styled.a<{ height?: string }>`
+    height: ${({ height }) => height || "initial"};
 `;
 
 interface IProps {
+    height?: string;
     href?: string;
     src: string;
-    width?: string;
 }
 
 export default class extends React.Component<IProps> {
     public render() {
-        const { href, src, width } = this.props;
+        const { height, href, src } = this.props;
 
         return href ?
-            <Link href={href} width={width}><Image src={src} /></Link> :
-            <Image src={src} width={width} />;
+            <Link height={height} href={href}><Image src={src} /></Link> :
+            <Image height={height} src={src} />;
     }
 }

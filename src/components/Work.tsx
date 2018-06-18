@@ -36,7 +36,7 @@ export default class extends React.Component<IProps> {
 
         return (
             <Work>
-                <Image href={href} src={image} width="60%" />
+                <Image href={href} src={image} height="10em" />
                 <Name><Link href={href}>{name}</Link></Name>
                 <Description>{children}</Description>
             </Work>

@@ -11,10 +11,10 @@ test("Render a component with a link", () => {
     shallow(<Image href="/" src="/icon.png" />);
 });
 
-test("Render a component specifying its width", () => {
-    shallow(<Image src="/icon.png" width="80%" />);
+test("Render a component specifying its height", () => {
+    shallow(<Image height="80%" src="/icon.png" />);
 });
 
-test("Render a component with a link specifying its width", () => {
-    shallow(<Image href="/" src="/icon.png" width="80%" />);
+test("Render a component with a link specifying its height", () => {
+    shallow(<Image height="80%" href="/" src="/icon.png" />);
 });
