@@ -1,14 +1,15 @@
 import * as React from "react";
 import styled from "styled-components";
 
-const Link = styled.a`
+import { Link as NormalLink, linkColor } from "./Link";
+
+const Link = styled(NormalLink)`
     line-height: 0;
     text-decoration: none;
     font-size: 2em;
-    color: black;
 
-    &:visited {
-        color: black;
+    &:hover {
+        text-decoration: none;
     }
 `;
 

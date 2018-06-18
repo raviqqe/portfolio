@@ -1,18 +1,22 @@
+import { lighten } from "polished";
 import * as React from "react";
 import styled from "styled-components";
 
-const Link = styled.a`
-	color: coral;
-	font-size: inherit;
-	text-decoration: none;
+export const linkColor = "#bb0000";
 
-	&:visited {
-		color: coral;
-	}
+export const Link = styled.a`
+    color: ${linkColor};
+    font-size: inherit;
+    text-decoration: none;
 
-	&:hover {
-		text-decoration: underline;
-	}
+    &:visited {
+        color: ${linkColor};
+    }
+
+    &:hover {
+        color: ${lighten(0.2, linkColor)};
+        text-decoration: underline;
+    }
 `;
 
 interface IProps {
