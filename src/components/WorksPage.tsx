@@ -10,6 +10,7 @@ const spiderImage = "http://res.freestockphotos.biz/pictures/4/4906-illustration
 const Works = styled.div`
     display: flex;
     justify-content: center;
+    flex-wrap: wrap;
 
     > * {
         margin: 0.5em;
