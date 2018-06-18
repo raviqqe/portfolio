@@ -12,8 +12,10 @@ const Work = styled.div`
     flex-direction: column;
     align-items: center;
 
-    > * {
-        margin: 0.4em 0;
+    ${verticalMargin("0.5rem")}
+
+    > *:first-child {
+        margin-bottom: 1rem;
     }
 `;
 
