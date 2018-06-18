@@ -21,7 +21,8 @@ const Name = styled.h3`
 `;
 
 const Description = styled.p`
-    color: #444;
+    color: #333;
+    font-family: "Roboto Condensed", sans-serif;
 `;
 
 interface IProps {

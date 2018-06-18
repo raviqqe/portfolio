@@ -2,6 +2,7 @@ import { css, injectGlobal, InterpolationValue } from "styled-components";
 
 injectGlobal`
     @import url('https://fonts.googleapis.com/css?family=Khand');
+    @import url('https://fonts.googleapis.com/css?family=Roboto+Condensed');
 
     * {
         box-sizing: border-box;

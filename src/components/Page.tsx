@@ -5,7 +5,7 @@ import { horizontalMargin, verticalMargin } from "../style";
 
 const Page = styled.div`
     ${verticalMargin("0.5em")}
-    border: 2px solid black;
+    border: 2px solid #333;
     flex: 1;
     padding: 1em 1.5em;
 `;
