@@ -8,6 +8,7 @@ import styled from "styled-components";
 import { Page } from "../domain";
 import { verticalMargin } from "../style";
 import PageButton from "./PageButton";
+import SocialMediaLinks from "./SocialMediaLinks";
 
 const Menu = styled.div`
     ${verticalMargin("0.5em")}
@@ -23,6 +24,7 @@ export default class extends React.Component {
                 <PageButton icon={<GitHub />} page={Page.Contribution} />
                 <PageButton icon={<Book />} page={Page.Study} />
                 <PageButton icon={<Rocket />} page={Page.Story} />
+                <SocialMediaLinks />
             </Menu>
         );
     }
