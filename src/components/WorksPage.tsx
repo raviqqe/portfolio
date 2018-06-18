@@ -10,6 +10,10 @@ const spiderImage = "http://res.freestockphotos.biz/pictures/4/4906-illustration
 const Works = styled.div`
     display: flex;
     justify-content: center;
+
+    > * {
+        margin: 0.5em;
+    }
 `;
 
 export default class extends React.Component {
@@ -20,6 +24,15 @@ export default class extends React.Component {
                 subtitle="works I've made in a number of programming languages"
             >
                 <Works>
+                    <Work
+                        href="https://cloe-lang.org"
+                        image="https://cloe-lang.org/icon512.png"
+                        name="Cloe programming language"
+                    >
+                        Cloe is the timeless functional programming language
+                        which provides implicit parallelism, concurrency, and
+                        reactiveness. It aims to be simple and practical.
+                    </Work>
                     <Work
                         href="https://tasks.code2d.org"
                         image="https://tasks.code2d.org/icon512.png"
