@@ -4,6 +4,7 @@ import styled from "styled-components";
 import { verticalMargin } from "../style";
 import Image from "./Image";
 import Link from "./Link";
+import Text from "./Text";
 
 const Work = styled.div`
     width: 16em;
@@ -20,11 +21,6 @@ const Name = styled.h3`
     font-size: 1.2em;
 `;
 
-const Description = styled.p`
-    color: #333;
-    font-family: "Roboto Condensed", sans-serif;
-`;
-
 interface IProps {
     href: string;
     image: string;
@@ -39,7 +35,7 @@ export default class extends React.Component<IProps> {
             <Work>
                 <Image href={href} src={image} height="10em" />
                 <Name><Link href={href}>{name}</Link></Name>
-                <Description>{children}</Description>
+                <Text>{children}</Text>
             </Work>
         );
     }
