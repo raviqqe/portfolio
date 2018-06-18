@@ -11,10 +11,14 @@ const Button = styled.button`
 
     font: inherit;
     font-size: 1.1em;
-    color: black;
-    background: transparent;
-    border: 2px solid black;
+    color: white;
+    background: black;
+    border: none;
     user-select: none;
+
+    &:hover {
+        background: rgba(0, 0, 0, 0.7);
+    }
 `;
 
 const Icon = styled.div`
