@@ -14,7 +14,7 @@ import WorksPage from "./WorksPage";
 
 const App = styled.div`
     width: 100%;
-    max-width: 1024px;
+    max-width: 75rem;
     height: 100%;
     margin: auto;
     padding: 1em;
