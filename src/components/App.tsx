@@ -18,6 +18,7 @@ const App = styled.div`
     height: 100%;
     margin: auto;
     padding: 1em;
+    overflow: auto;
 `;
 
 const Content = styled.div`
