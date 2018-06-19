@@ -1,6 +1,7 @@
 import * as React from "react";
 import styled from "styled-components";
 
+import Link from "./Link";
 import Text from "./Text";
 
 interface IProps {
@@ -29,7 +30,7 @@ export default class extends React.Component<IProps> {
 
         return (
             <Project>
-                <Name>{name}</Name>
+                <Name><Link href={href}>{name}</Link></Name>
                 <Text>{children}</Text>
             </Project>
         );
