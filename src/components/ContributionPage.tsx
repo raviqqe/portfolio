@@ -28,8 +28,8 @@ export default class extends React.Component {
                     I've written a number of codes mostly as pull requests to
                     third-party repositories on GitHub.
                     The projects I contributed to are listed here, which
-                    describes what kinds of topics what I'm interested in and
-                    keen on.
+                    describes what kinds of technical topics what I'm interested
+                    in and keen on.
                 </Text>
                 <Projects>
                     <Project
@@ -79,6 +79,10 @@ export default class extends React.Component {
                         this project.
                     </Project>
                 </Projects>
+                <Text>
+                    Please visit <Link href="https://github.com/raviqqe">my GitHub profile</Link>
+                    {" "}to see more of my contirubtion and OSS activities.
+                </Text>
             </Page>
         );
     }
