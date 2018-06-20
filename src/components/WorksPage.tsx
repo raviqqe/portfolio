@@ -26,7 +26,7 @@ export default class extends React.Component {
         return (
             <Page
                 title={domain.Page.Works}
-                subtitle="works I've made in a number of programming languages"
+                subtitle="projects I've worked on in different languages"
             >
                 <Works>
                     <Work
@@ -36,7 +36,13 @@ export default class extends React.Component {
                     >
                         Cloe is the timeless functional programming language
                         which provides implicit parallelism, concurrency, and
-                        reactiveness. It aims to be simple and practical.
+                        reactiveness and aims to be simple and practical.
+                        The word "timeless" denotes that there is no concept of
+                        time in the language by default, which simplifies codes
+                        enormously.
+                        Its traits originate from other functional programming
+                        languages while its runtime is heavily based on part
+                        of Haskell which relates to its parallelism and concurrency.
                     </Work>
                     <Work
                         href="https://tasks.code2d.org"
@@ -44,6 +50,12 @@ export default class extends React.Component {
                         name="Pomodoro Tasks"
                     >
                         An easy-to-use todo and pomodoro timer app.
+                        It is developed with React/Redux and TypeScript as a
+                        Progressive Web App and runs on Firebase backend.
+                        In addition to data synchronization over multiple devices
+                        and responsive design, its best feature is offline capability
+                        with which users can manage and edit their tasks even
+                        when their devices are not connected to the Internet.
                     </Work>
                     <Work
                         href="https://github.com/raviqqe/muffet"
@@ -51,13 +63,27 @@ export default class extends React.Component {
                         name="Muffet"
                     >
                         Muffet is the fast website link checker written in Go.
+                        Although this kind of tool was necessary to develop and
+                        maintain static websites for me, I've never met any
+                        satisfactory tool which fills my functional and
+                        performance needs.
+                        And that's why I made it.
+                        When you run it on terminal, it looks very fast as the
+                        common bottlenecks in web scraping is optimized so that
+                        check results are displayed asynchronously as it flows.
                     </Work>
                     <Work
                         href="https://github.com/raviqqe/hamt"
                         image={Go}
                         name="HAMT in Go"
                     >
-                        HAMT implementation in Go.
+                        Hash-Array Mapped Trie (HAMT) implementation in Go which
+                        realizes immutable and memory-efficient map and set data structures.
+                        HAMT is a data structure popular as a map (a.k.a.
+                        associative array or dictionary) or set and its immutable
+                        variant is adopted widely by functional programming languages.
+                        While HAMT has been long since it was proposed, this
+                        library integrates improvement found in recent research.
                     </Work>
                     <Work
                         href="https://github.com/raviqqe/tensorflow-font2char2word2sent2doc"
@@ -76,9 +102,7 @@ export default class extends React.Component {
                                 "16HLT-hierarchical-attention-networks.pdf"}
                         >
                             Hierarchical Attention Networks for Document Classification
-                        </Link>.
-                        It is written with TensorFlow and Python for my research
-                        work when I was in university.
+                        </Link> written with TensorFlow and Python as my research work.
                         The design completely separates hyperparameters and
                         the models themselves so that hyperparameter optimization
                         can be done easily and third-party users utilize the library
