@@ -13,7 +13,7 @@ export const actionCreators = {
 
 export type IActionCreators = typeof actionCreators;
 
-export const initialState = { page: Page.Projects };
+export const initialState = { page: Page.About };
 
 export type IState = typeof initialState;
 
