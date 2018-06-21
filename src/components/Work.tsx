@@ -26,16 +26,17 @@ const Name = styled.h3`
 interface IProps {
     href: string;
     image: string;
+    imagePercentage?: number;
     name: string;
 }
 
 export default class extends React.Component<IProps> {
     public render() {
-        const { children, href, image, name } = this.props;
+        const { children, href, image, imagePercentage, name } = this.props;
 
         return (
             <Work>
-                <Image href={href} src={image} height="10em" />
+                <Image href={href} imagePercentage={imagePercentage} src={image} height="10em" />
                 <Name><Link href={href}>{name}</Link></Name>
                 <Text>{children}</Text>
             </Work>

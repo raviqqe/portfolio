@@ -32,6 +32,7 @@ export default class extends React.Component {
                     <Work
                         href="https://cloe-lang.org"
                         image="https://cloe-lang.org/icon512.png"
+                        imagePercentage={80}
                         name="Cloe programming language"
                     >
                         Cloe is the timeless functional programming language
@@ -47,6 +48,7 @@ export default class extends React.Component {
                     <Work
                         href="https://tasks.code2d.org"
                         image="https://tasks.code2d.org/icon512.png"
+                        imagePercentage={90}
                         name="Pomodoro Tasks"
                     >
                         An easy-to-use todo and pomodoro timer app.
@@ -88,6 +90,7 @@ export default class extends React.Component {
                     <Work
                         href="https://github.com/raviqqe/tensorflow-font2char2word2sent2doc"
                         image={TensorFlow}
+                        imagePercentage={85}
                         name="tensorflow-font2char2word2sent2doc"
                     >
                         The implementation of {" "}
@@ -111,6 +114,7 @@ export default class extends React.Component {
                     <Work
                         href="https://github.com/raviqqe/tensorflow-qnd"
                         image={TensorFlow}
+                        imagePercentage={85}
                         name="tensorflow-qnd"
                     >
                         A Python library to fasilitate distributed training and model
