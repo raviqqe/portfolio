@@ -10,7 +10,7 @@ import PageButton from "../PageButton";
 test("Render a component", () => {
     shallow(
         <Provider store={createStore()}>
-            <PageButton icon={<Add />} page={Page.Works} />
+            <PageButton icon={<Add />} page={Page.Projects} />
         </Provider>,
     );
 });
@@ -20,12 +20,12 @@ test("Render proper text", () => {
         <Provider store={createStore()}>
             <PageButton
                 icon={<Add />}
-                page={Page.Works}
+                page={Page.Projects}
             />
         </Provider >,
     );
 
-    expect(element.text()).toBe("works");
+    expect(element.text()).toBe("projects");
 });
 
 test("Set a page on click", () => {

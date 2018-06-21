@@ -11,7 +11,7 @@ import Work from "./Work";
 
 const tensorFlowLogoURL = "https://raw.githubusercontent.com/valohai/ml-logos/master/tensorflow-tf.svg";
 
-const Works = styled.div`
+const Projects = styled.div`
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
@@ -25,10 +25,10 @@ export default class extends React.Component {
     public render() {
         return (
             <Page
-                title={domain.Page.Works}
-                subtitle="projects I've worked on in different languages"
+                title={domain.Page.Projects}
+                subtitle="software I've worked on in different languages"
             >
-                <Works>
+                <Projects>
                     <Work
                         href="https://cloe-lang.org"
                         image="https://cloe-lang.org/icon512.png"
@@ -124,7 +124,7 @@ export default class extends React.Component {
                         GPUs on multiple machines, which multiplied training
                         speed several times in my environment.
                     </Work>
-                </Works>
+                </Projects>
                 <Text>
                     Please refer to
                     {" "}<Link href="https://github.com/raviqqe">my GitHub page</Link>{" "}

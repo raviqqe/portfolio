@@ -21,7 +21,7 @@ export default class extends React.Component {
         return (
             <Menu>
                 <PageButton icon={<Rocket />} page={Page.About} />
-                <PageButton icon={<Cubes />} page={Page.Works} />
+                <PageButton icon={<Cubes />} page={Page.Projects} />
                 <PageButton icon={<GitHub />} page={Page.Contribution} />
                 <PageButton icon={<Book />} page={Page.Study} />
                 <SocialMediaLinks />

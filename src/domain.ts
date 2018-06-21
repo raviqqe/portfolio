@@ -1,6 +1,6 @@
 export enum Page {
     About = "about",
-    Works = "works",
+    Projects = "projects",
     Contribution = "contribution",
     Study = "study",
 }
