@@ -5,10 +5,10 @@ import styled from "styled-components";
 import { Page } from "../domain";
 import * as page from "../state/page";
 import { horizontalMargin } from "../style";
+import AboutPage from "./AboutPage";
 import ContributionPage from "./ContributionPage";
 import Header from "./Header";
 import Menu from "./Menu";
-import StoryPage from "./StoryPage";
 import StudyPage from "./StudyPage";
 import WorksPage from "./WorksPage";
 
@@ -36,8 +36,8 @@ export default class extends React.Component<Partial<page.IState>> {
                 <Content>
                     <Menu />
                     {{
+                        [Page.About]: <AboutPage />,
                         [Page.Contribution]: <ContributionPage />,
-                        [Page.Story]: <StoryPage />,
                         [Page.Study]: <StudyPage />,
                         [Page.Works]: <WorksPage />,
                     }[this.props.page]}

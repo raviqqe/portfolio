@@ -7,7 +7,7 @@ export default class extends React.Component {
     public render() {
         return (
             <Page
-                title={domain.Page.Story}
+                title={domain.Page.About}
                 subtitle="what I'm looking for in my career"
             >
                 Hello, world!

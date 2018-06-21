@@ -20,10 +20,10 @@ export default class extends React.Component {
     public render() {
         return (
             <Menu>
+                <PageButton icon={<Rocket />} page={Page.About} />
                 <PageButton icon={<Cubes />} page={Page.Works} />
                 <PageButton icon={<GitHub />} page={Page.Contribution} />
                 <PageButton icon={<Book />} page={Page.Study} />
-                <PageButton icon={<Rocket />} page={Page.Story} />
                 <SocialMediaLinks />
             </Menu>
         );
