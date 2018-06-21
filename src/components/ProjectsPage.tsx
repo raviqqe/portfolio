@@ -9,8 +9,6 @@ import Page from "./Page";
 import Text from "./Text";
 import Work from "./Work";
 
-const tensorFlowLogoURL = "https://raw.githubusercontent.com/valohai/ml-logos/master/tensorflow-tf.svg";
-
 const Projects = styled.div`
     display: flex;
     justify-content: center;
