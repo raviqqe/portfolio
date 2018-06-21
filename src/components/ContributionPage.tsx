@@ -2,10 +2,14 @@ import * as React from "react";
 import styled from "styled-components";
 
 import * as domain from "../domain";
+import TensorFlow = require("../images/tensorflow.svg");
 import Link from "./Link";
 import Page from "./Page";
 import Project from "./Project";
 import Text from "./Text";
+
+const linuxbrewLogoURL = "http://linuxbrew.sh/images/linuxbrew-256x256.png";
+const rustLogoURL = "https://www.rust-lang.org/logos/rust-logo-blk.svg";
 
 const Projects = styled.div`
     display: flex;
@@ -34,6 +38,8 @@ export default class extends React.Component {
                 <Projects>
                     <Project
                         href="https://tensorflow.org"
+                        image={TensorFlow}
+                        imagePercentage={85}
                         name="TensorFlow"
                     >
                         TensorFlow is one of the most popular Deep Learning
@@ -52,6 +58,7 @@ export default class extends React.Component {
                     </Project>
                     <Project
                         href="https://github.com/rust-lang-nursery/futures-rs"
+                        image={rustLogoURL}
                         name="futures-rs"
                     >
                         futures.rs is an implementation of promises and
@@ -66,6 +73,8 @@ export default class extends React.Component {
                     </Project>
                     <Project
                         href="https://github.com/Linuxbrew/homebrew-core"
+                        image={linuxbrewLogoURL}
+                        imagePercentage={90}
                         name="Linuxbrew"
                     >
                         Linuxbrew is a fork of

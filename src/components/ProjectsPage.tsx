@@ -6,8 +6,8 @@ import Go = require("../images/go.svg");
 import TensorFlow = require("../images/tensorflow.svg");
 import Link from "./Link";
 import Page from "./Page";
+import Project from "./Project";
 import Text from "./Text";
-import Work from "./Work";
 
 const Projects = styled.div`
     display: flex;
@@ -27,7 +27,7 @@ export default class extends React.Component {
                 subtitle="software I've worked on in different languages"
             >
                 <Projects>
-                    <Work
+                    <Project
                         href="https://cloe-lang.org"
                         image="https://cloe-lang.org/icon512.png"
                         imagePercentage={80}
@@ -42,8 +42,8 @@ export default class extends React.Component {
                         Its traits originate from other functional programming
                         languages while its runtime is heavily based on part
                         of Haskell which relates to its parallelism and concurrency.
-                    </Work>
-                    <Work
+                    </Project>
+                    <Project
                         href="https://tasks.code2d.org"
                         image="https://tasks.code2d.org/icon512.png"
                         imagePercentage={90}
@@ -56,8 +56,8 @@ export default class extends React.Component {
                         and responsive design, its best feature is offline capability
                         with which users can manage and edit their tasks even
                         when their devices are not connected to the Internet.
-                    </Work>
-                    <Work
+                    </Project>
+                    <Project
                         href="https://github.com/raviqqe/muffet"
                         image={Go}
                         name="Muffet"
@@ -71,8 +71,8 @@ export default class extends React.Component {
                         When you run it on terminal, it looks very fast as the
                         common bottlenecks in web scraping is optimized so that
                         check results are displayed asynchronously as it flows.
-                    </Work>
-                    <Work
+                    </Project>
+                    <Project
                         href="https://github.com/raviqqe/hamt"
                         image={Go}
                         name="HAMT in Go"
@@ -84,8 +84,8 @@ export default class extends React.Component {
                         variant is adopted widely by functional programming languages.
                         While HAMT has been long since it was proposed, this
                         library integrates improvement found in recent research.
-                    </Work>
-                    <Work
+                    </Project>
+                    <Project
                         href="https://github.com/raviqqe/tensorflow-font2char2word2sent2doc"
                         image={TensorFlow}
                         imagePercentage={85}
@@ -108,8 +108,8 @@ export default class extends React.Component {
                         the models themselves so that hyperparameter optimization
                         can be done easily and third-party users utilize the library
                         for use cases other than just research experiments.
-                    </Work>
-                    <Work
+                    </Project>
+                    <Project
                         href="https://github.com/raviqqe/tensorflow-qnd"
                         image={TensorFlow}
                         imagePercentage={85}
@@ -121,7 +121,7 @@ export default class extends React.Component {
                         data saving and data-parallel training over multiple
                         GPUs on multiple machines, which multiplied training
                         speed several times in my environment.
-                    </Work>
+                    </Project>
                 </Projects>
                 <Text>
                     Please refer to
