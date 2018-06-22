@@ -8,7 +8,7 @@ import SocialMediaLink from "./SocialMediaLink";
 
 const Links = styled.div`
     position: fixed;
-    right: 0;
+    right: 1em;
     top: 0;
     height: 100%;
     display: flex;
