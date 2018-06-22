@@ -3,6 +3,7 @@
 	"version": "0.1.0",
 	"private": true,
 	"dependencies": {
+		"devicon": "git+https://github.com/konpa/devicon.git",
 		"polished": "^1.9.2",
 		"react": "^16.4.1",
 		"react-dom": "^16.4.1",
