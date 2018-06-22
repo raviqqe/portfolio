@@ -7,17 +7,17 @@ import styled from "styled-components";
 import SocialMediaLink from "./SocialMediaLink";
 
 const Links = styled.div`
+    position: fixed;
+    right: 0;
+    top: 0;
+    height: 100%;
     display: flex;
+    flex-direction: column;
     justify-content: center;
-    align-items: center;
 
     > * {
         margin: 0.1em;
     }
-`;
-
-const QiitaIcon = styled.div`
-    font-family: sans-serif;
 `;
 
 export default class extends React.Component {
@@ -25,20 +25,19 @@ export default class extends React.Component {
         return (
             <Links>
                 <SocialMediaLink
+                    color="black"
                     href="https://github.com/raviqqe"
                     icon={<GitHub />}
                 />
                 <SocialMediaLink
+                    color="deepskyblue"
                     href="https://twitter.com/raviqqe"
                     icon={<Twitter />}
                 />
                 <SocialMediaLink
+                    color="#0077B5"
                     href="https://www.linkedin.com/in/yota-toyama-29b313bb/"
                     icon={<LinkedIn />}
-                />
-                <SocialMediaLink
-                    href="https://qiita.com/raviqqe"
-                    icon={<QiitaIcon>Q</QiitaIcon>}
                 />
             </Links>
         );

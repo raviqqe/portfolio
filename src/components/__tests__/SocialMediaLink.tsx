@@ -5,5 +5,5 @@ import Add = require("react-icons/lib/md/add");
 import SocialMediaLink from "../SocialMediaLink";
 
 test("Render a component", () => {
-    shallow(<SocialMediaLink href="https://google.com" icon={<Add />} />);
+    shallow(<SocialMediaLink color="black" href="https://google.com" icon={<Add />} />);
 });

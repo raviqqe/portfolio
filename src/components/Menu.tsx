@@ -8,7 +8,6 @@ import styled from "styled-components";
 import { Page } from "../domain";
 import { verticalMargin } from "../style";
 import PageButton from "./PageButton";
-import SocialMediaLinks from "./SocialMediaLinks";
 
 const Menu = styled.div`
     display: flex;

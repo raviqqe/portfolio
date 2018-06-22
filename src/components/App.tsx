@@ -11,6 +11,7 @@ import Header from "./Header";
 import Menu from "./Menu";
 import ProjectsPage from "./ProjectsPage";
 import SkillsPage from "./SkillsPage";
+import SocialMediaLinks from "./SocialMediaLinks";
 
 const App = styled.div`
     width: 100%;
@@ -30,6 +31,7 @@ export default class extends React.Component<Partial<page.IState>> {
                     [Page.Skills]: <SkillsPage />,
                     [Page.Projects]: <ProjectsPage />,
                 }[this.props.page]}
+                <SocialMediaLinks />
             </App>
         );
     }
