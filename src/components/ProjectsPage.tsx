@@ -89,21 +89,14 @@ export default class extends React.Component {
                         href="https://github.com/raviqqe/tensorflow-font2char2word2sent2doc"
                         image={TensorFlow}
                         imagePercentage={85}
-                        name="tensorflow-font2char2word2sent2doc"
+                        name="font2char2word2sent2doc"
                     >
                         The implementation of {" "}
                         <Link href="https://aclweb.org/anthology/I17-2064">
                             Utilizing Visual Forms of Japanese Characters for
                             Neural Review Classification
                         </Link>
-                        {" "}and{" "}
-                        <Link
-                            href={
-                                "https://www.cs.cmu.edu/~./hovy/papers/" +
-                                "16HLT-hierarchical-attention-networks.pdf"}
-                        >
-                            Hierarchical Attention Networks for Document Classification
-                        </Link> written with TensorFlow and Python as my research work.
+                        {" "}written with TensorFlow and Python as my research work.
                         The design completely separates hyperparameters and
                         the models themselves so that hyperparameter optimization
                         can be done easily and third-party users utilize the library

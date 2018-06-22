@@ -20,7 +20,7 @@ const Project = styled.div`
 `;
 
 const Name = styled.h3`
-    font-size: 1.2em;
+    font-size: 1.5em;
 `;
 
 interface IProps {
