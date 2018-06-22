@@ -7,7 +7,7 @@ import styled from "styled-components";
 
 import { Page } from "../domain";
 import { verticalMargin } from "../style";
-import PageButton from "./PageButton";
+import Button from "./Button";
 
 const Menu = styled.div`
     display: flex;
@@ -22,22 +22,22 @@ export default class extends React.Component {
     public render() {
         return (
             <Menu>
-                <PageButton
+                <Button
                     color="darkorange"
                     icon={<Rocket />}
                     page={Page.About}
                 />
-                <PageButton
+                <Button
                     color="firebrick"
                     icon={<Cubes />}
                     page={Page.Projects}
                 />
-                <PageButton
+                <Button
                     color="steelblue"
                     icon={<GitHub />}
                     page={Page.Contribution}
                 />
-                <PageButton
+                <Button
                     color="olivedrab"
                     icon={<Book />}
                     page={Page.Skills}

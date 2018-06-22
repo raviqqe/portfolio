@@ -1,6 +1,10 @@
 import { lighten } from "polished";
 import * as React from "react";
+import { connect } from "react-redux";
 import styled from "styled-components";
+
+import { Page } from "../domain";
+import { actionCreators, IActionCreators } from "../state/page";
 
 const Button = styled.button<{ color: string }>`
     display: flex;
@@ -33,20 +37,21 @@ const Label = styled.div`
     text-transform: capitalize;
 `;
 
-interface IProps {
-    color?: string;
+interface IProps extends Partial<IActionCreators> {
+    color: string;
     icon: JSX.Element;
-    onClick: () => void;
+    page: Page;
 }
 
+@connect(null, actionCreators)
 export default class extends React.Component<IProps> {
     public render() {
-        const { children, color, icon, onClick } = this.props;
+        const { color, icon, page, setPage } = this.props;
 
         return (
-            <Button color={color || "black"} onClick={onClick}>
+            <Button color={color || "black"} onClick={() => setPage(page)}>
                 <Icon>{icon}</Icon>
-                <Label>{children}</Label>
+                <Label>{page}</Label>
             </Button>
         );
     }
