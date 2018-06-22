@@ -41,7 +41,7 @@ export default class extends React.Component {
                 <PageButton
                     color="olivedrab"
                     icon={<Book />}
-                    page={Page.Study}
+                    page={Page.Skills}
                 />
             </Menu>
         );

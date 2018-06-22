@@ -10,7 +10,7 @@ import ContributionPage from "./ContributionPage";
 import Header from "./Header";
 import Menu from "./Menu";
 import ProjectsPage from "./ProjectsPage";
-import StudyPage from "./StudyPage";
+import SkillsPage from "./SkillsPage";
 
 const App = styled.div`
     width: 100%;
@@ -27,7 +27,7 @@ export default class extends React.Component<Partial<page.IState>> {
                 {{
                     [Page.About]: <AboutPage />,
                     [Page.Contribution]: <ContributionPage />,
-                    [Page.Study]: <StudyPage />,
+                    [Page.Skills]: <SkillsPage />,
                     [Page.Projects]: <ProjectsPage />,
                 }[this.props.page]}
             </App>

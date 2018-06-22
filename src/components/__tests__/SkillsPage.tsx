@@ -1,8 +1,8 @@
 import { shallow } from "enzyme";
 import * as React from "react";
 
-import StudyPage from "../StudyPage";
+import SkillsPage from "../SkillsPage";
 
 test("Render a component", () => {
-    shallow(<StudyPage />);
+    shallow(<SkillsPage />);
 });

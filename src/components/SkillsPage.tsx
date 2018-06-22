@@ -7,8 +7,8 @@ export default class extends React.Component {
     public render() {
         return (
             <Page
-                title={domain.Page.Study}
-                subtitle="my study and academic knowledge"
+                title={domain.Page.Skills}
+                subtitle="my knowledge and ability"
             >
                 Hello, world!
             </Page>
