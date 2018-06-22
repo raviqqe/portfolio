@@ -2,20 +2,7 @@ import * as React from "react";
 import styled from "styled-components";
 
 import { horizontalMargin } from "../style";
-
-const Page = styled.div`
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex: 1;
-`;
-
-const Content = styled.div`
-    padding: 1em 1.5em;
-    max-width: 60em;
-    max-height: 100%;
-    overflow: auto;
-`;
+import MetaPage from "./MetaPage";
 
 const Titles = styled.div`
     ${horizontalMargin("0.6em")}
@@ -46,15 +33,13 @@ export default class extends React.Component<IProps> {
         const { children, title, subtitle } = this.props;
 
         return (
-            <Page>
-                <Content>
-                    <Titles>
-                        <Title>{title}</Title>
-                        <Subtitle>{subtitle}</Subtitle>
-                    </Titles>
-                    {children}
-                </Content>
-            </Page>
+            <MetaPage>
+                <Titles>
+                    <Title>{title}</Title>
+                    <Subtitle>{subtitle}</Subtitle>
+                </Titles>
+                {children}
+            </MetaPage>
         );
     }
 }

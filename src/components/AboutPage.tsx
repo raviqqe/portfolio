@@ -1,16 +1,16 @@
 import * as React from "react";
+import styled from "styled-components";
 
 import * as domain from "../domain";
-import Page from "./Page";
+import Header from "./Header";
+import MetaPage from "./MetaPage";
 import Text from "./Text";
 
 export default class extends React.Component {
     public render() {
         return (
-            <Page
-                title={domain.Page.About}
-                subtitle="what I'm looking for in my career"
-            >
+            <MetaPage>
+                <Header />
                 <Text>
                     I'm a software engineer of full-stack development and
                     AI technology especially for Natural Language Processing.
@@ -24,7 +24,7 @@ export default class extends React.Component {
                     I have learned various languages and frameworks since I was
                     a self-taught programmer.
                 </Text>
-            </Page>
+            </MetaPage>
         );
     }
 }
