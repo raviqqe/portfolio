@@ -7,13 +7,10 @@ import styled from "styled-components";
 import SocialMediaLink from "./SocialMediaLink";
 
 const Links = styled.div`
-    position: fixed;
-    right: 1em;
-    top: 0;
-    height: 100%;
     display: flex;
     flex-direction: column;
     justify-content: center;
+    padding-right: 1em;
 
     > * {
         margin: 0.1em;
