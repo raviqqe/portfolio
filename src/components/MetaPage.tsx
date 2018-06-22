@@ -9,7 +9,7 @@ const Page = styled.div`
 `;
 
 const Content = styled.div`
-    padding: 1em 1.5em;
+    padding: 3em 4em;
     max-width: 60em;
     max-height: 100%;
     overflow: auto;

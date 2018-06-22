@@ -12,14 +12,14 @@ const Titles = styled.div`
 `;
 
 const Title = styled.h2`
-    font-size: 2em;
+    font-size: 3em;
     margin-top: 0;
     margin-bottom: 0;
     text-transform: capitalize;
 `;
 
 const Subtitle = styled.div`
-    font-size: 1.2em;
+    font-size: 1.5em;
     margin-bottom: 0.4em;
 `;
 
