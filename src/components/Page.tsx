@@ -1,13 +1,20 @@
 import * as React from "react";
 import styled from "styled-components";
 
-import { horizontalMargin, verticalMargin } from "../style";
+import { horizontalMargin } from "../style";
 
 const Page = styled.div`
-    ${verticalMargin("0.5em")}
-    border: 2px solid #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     flex: 1;
+`;
+
+const Content = styled.div`
     padding: 1em 1.5em;
+    max-width: 60em;
+    max-height: 100%;
+    overflow: auto;
 `;
 
 const Titles = styled.div`
@@ -29,9 +36,6 @@ const Subtitle = styled.div`
     margin-bottom: 0.4em;
 `;
 
-const Content = styled.div`
-`;
-
 interface IProps {
     title: string;
     subtitle: string;
@@ -43,11 +47,11 @@ export default class extends React.Component<IProps> {
 
         return (
             <Page>
-                <Titles>
-                    <Title>{title}</Title>
-                    <Subtitle>{subtitle}</Subtitle>
-                </Titles>
                 <Content>
+                    <Titles>
+                        <Title>{title}</Title>
+                        <Subtitle>{subtitle}</Subtitle>
+                    </Titles>
                     {children}
                 </Content>
             </Page>

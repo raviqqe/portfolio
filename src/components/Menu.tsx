@@ -11,20 +11,34 @@ import PageButton from "./PageButton";
 import SocialMediaLinks from "./SocialMediaLinks";
 
 const Menu = styled.div`
-    ${verticalMargin("0.5em")}
     display: flex;
     flex-direction: column;
+
+    > * {
+        flex: 1;
+    }
 `;
 
 export default class extends React.Component {
     public render() {
         return (
             <Menu>
-                <PageButton icon={<Rocket />} page={Page.About} />
-                <PageButton icon={<Cubes />} page={Page.Projects} />
-                <PageButton icon={<GitHub />} page={Page.Contribution} />
-                <PageButton icon={<Book />} page={Page.Study} />
-                <SocialMediaLinks />
+                <PageButton
+                    icon={<Rocket />}
+                    page={Page.About}
+                />
+                <PageButton
+                    icon={<Cubes />}
+                    page={Page.Projects}
+                />
+                <PageButton
+                    icon={<GitHub />}
+                    page={Page.Contribution}
+                />
+                <PageButton
+                    icon={<Book />}
+                    page={Page.Study}
+                />
             </Menu>
         );
     }
