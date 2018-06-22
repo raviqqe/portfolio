@@ -6,6 +6,7 @@ import { actionCreators, IActionCreators } from "../state/page";
 import Button from "./Button";
 
 interface IProps extends Partial<IActionCreators> {
+    color?: string;
     icon: JSX.Element;
     page: Page;
 }
@@ -13,8 +14,8 @@ interface IProps extends Partial<IActionCreators> {
 @connect(null, actionCreators)
 export default class extends React.Component<IProps> {
     public render() {
-        const { icon, page, setPage } = this.props;
+        const { color, icon, page, setPage } = this.props;
 
-        return <Button icon={icon} onClick={() => setPage(page)}>{page}</Button>;
+        return <Button color={color} icon={icon} onClick={() => setPage(page)}>{page}</Button>;
     }
 }

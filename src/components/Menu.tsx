@@ -24,18 +24,22 @@ export default class extends React.Component {
         return (
             <Menu>
                 <PageButton
+                    color="darkorange"
                     icon={<Rocket />}
                     page={Page.About}
                 />
                 <PageButton
+                    color="firebrick"
                     icon={<Cubes />}
                     page={Page.Projects}
                 />
                 <PageButton
+                    color="steelblue"
                     icon={<GitHub />}
                     page={Page.Contribution}
                 />
                 <PageButton
+                    color="olivedrab"
                     icon={<Book />}
                     page={Page.Study}
                 />
