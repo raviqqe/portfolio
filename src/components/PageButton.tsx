@@ -6,7 +6,7 @@ import { actionCreators, IActionCreators } from "../state/page";
 import Button from "./Button";
 
 interface IProps extends Partial<IActionCreators> {
-    color?: string;
+    color: string;
     icon: JSX.Element;
     page: Page;
 }

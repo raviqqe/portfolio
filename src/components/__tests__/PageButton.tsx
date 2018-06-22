@@ -10,7 +10,7 @@ import PageButton from "../PageButton";
 test("Render a component", () => {
     shallow(
         <Provider store={createStore()}>
-            <PageButton icon={<Add />} page={Page.Projects} />
+            <PageButton color="red" icon={<Add />} page={Page.Projects} />
         </Provider>,
     );
 });
@@ -19,6 +19,7 @@ test("Render proper text", () => {
     const element = mount(
         <Provider store={createStore()}>
             <PageButton
+                color="red"
                 icon={<Add />}
                 page={Page.Projects}
             />
@@ -36,6 +37,7 @@ test("Set a page on click", () => {
     const element = mount(
         <Provider store={store}>
             <PageButton
+                color="red"
                 icon={<Add />}
                 page={Page.Contribution}
             />
