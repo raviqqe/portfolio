@@ -5,8 +5,9 @@ import styled from "styled-components";
 
 import { Page } from "../domain";
 import { actionCreators, IActionCreators } from "../state/page";
+import { instantDuration } from "../style";
 
-const Button = styled.button<{ color: string }>`
+const Button = styled.button<{ active: boolean, color: string }>`
     display: flex;
     justify-content: center;
     align-items: center;
@@ -15,15 +16,27 @@ const Button = styled.button<{ color: string }>`
     padding: 0.5em 1em;
 
     font: inherit;
-    font-size: 1.1em;
+    font-size: 1.2em;
     color: white;
     background: ${({ color }) => color};
     border: none;
     user-select: none;
+    transition: font-size ${instantDuration}, transform ${instantDuration};
+    transform: translateX(${({ active }) => active ? 1 : 0}em);
 
     &:hover {
         background: ${({ color }) => lighten(0.2, color)};
     }
+`;
+
+const Pad = styled.div`
+    position: absolute;
+    z-index: -1;
+    left: -1em;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: inherit;
 `;
 
 const Icon = styled.div`
@@ -38,18 +51,20 @@ const Label = styled.div`
 `;
 
 interface IProps extends Partial<IActionCreators> {
+    active?: boolean;
     color: string;
     icon: JSX.Element;
     page: Page;
 }
 
-@connect(null, actionCreators)
+@connect((state, props) => ({ active: state.page.page === props.page }), actionCreators)
 export default class extends React.Component<IProps> {
     public render() {
-        const { color, icon, page, setPage } = this.props;
+        const { active, color, icon, page, setPage } = this.props;
 
         return (
-            <Button color={color || "black"} onClick={() => setPage(page)}>
+            <Button active={active} color={color || "black"} onClick={() => setPage(page)}>
+                <Pad />
                 <Icon>{icon}</Icon>
                 <Label>{page}</Label>
             </Button>

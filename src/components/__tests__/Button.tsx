@@ -10,7 +10,7 @@ import Button from "../Button";
 test("Render a component", () => {
     shallow(
         <Provider store={createStore()}>
-            <Button color="red" icon={<Add />} page={Page.About}>foo</Button>
+            <Button active={false} color="red" icon={<Add />} page={Page.About}>foo</Button>
         </Provider>,
     );
 });
@@ -20,7 +20,7 @@ test("Set a page", () => {
 
     const element = mount(
         <Provider store={store}>
-            <Button color="red" icon={<Add />} page={Page.Projects}>foo</Button>
+            <Button active={false} color="red" icon={<Add />} page={Page.Projects}>foo</Button>
         </Provider>,
     );
 
