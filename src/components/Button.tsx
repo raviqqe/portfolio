@@ -25,7 +25,7 @@ const Button = styled.button<{ color: string }>`
 const Icon = styled.div`
     font-size: 1.5em;
     line-height: 0;
-    margin-right: 0.2em;
+    margin-right: 0.3em;
 `;
 
 const Label = styled.div`
