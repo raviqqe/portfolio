@@ -2,14 +2,12 @@ import * as React from "react";
 import styled from "styled-components";
 
 import * as domain from "../domain";
+import { Linuxbrew, Rust } from "../images";
 import TensorFlow = require("../images/tensorflow.svg");
 import Link from "./Link";
 import Page from "./Page";
 import Project from "./Project";
 import Text from "./Text";
-
-const linuxbrewLogoURL = "http://linuxbrew.sh/images/linuxbrew-256x256.png";
-const rustLogoURL = "https://www.rust-lang.org/logos/rust-logo-blk.svg";
 
 const Projects = styled.div`
     display: flex;
@@ -58,7 +56,7 @@ export default class extends React.Component {
                     </Project>
                     <Project
                         href="https://github.com/rust-lang-nursery/futures-rs"
-                        image={rustLogoURL}
+                        image={Rust}
                         name="futures-rs"
                     >
                         futures.rs is an implementation of promises and
@@ -73,7 +71,7 @@ export default class extends React.Component {
                     </Project>
                     <Project
                         href="https://github.com/Linuxbrew/homebrew-core"
-                        image={linuxbrewLogoURL}
+                        image={Linuxbrew}
                         imagePercentage={90}
                         name="Linuxbrew"
                     >
