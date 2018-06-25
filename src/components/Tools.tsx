@@ -8,6 +8,7 @@ const Tools = styled.div`
 
 const Label = styled.h4`
     font-size: 2em;
+    margin: 0;
 `;
 
 const Content = styled.div`
