@@ -5,7 +5,7 @@ import GitHub = require("react-icons/lib/fa/github");
 import Rocket = require("react-icons/lib/fa/rocket");
 import styled from "styled-components";
 
-import { Page } from "../domain";
+import { PageId } from "../domain";
 import { verticalMargin } from "../style";
 import Button from "./Button";
 
@@ -24,19 +24,19 @@ export default class extends React.Component {
             <Menu>
                 <Button
                     icon={<Rocket />}
-                    page={Page.About}
+                    pageId={PageId.About}
                 />
                 <Button
                     icon={<Cubes />}
-                    page={Page.Projects}
+                    pageId={PageId.Projects}
                 />
                 <Button
                     icon={<GitHub />}
-                    page={Page.Contribution}
+                    pageId={PageId.Contribution}
                 />
                 <Button
                     icon={<Book />}
-                    page={Page.Skills}
+                    pageId={PageId.Skills}
                 />
             </Menu>
         );

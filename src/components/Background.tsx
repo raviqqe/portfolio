@@ -2,7 +2,8 @@ import { lighten } from "polished";
 import * as React from "react";
 import styled from "styled-components";
 
-import { backgroundLightness, colors, masks, Page } from "../domain";
+import { PageId } from "../domain";
+import { backgroundLightness, colors, masks } from "../style/themes";
 
 const transitionMs = 300;
 
@@ -21,7 +22,7 @@ const Background = styled.div<{ color: string, mask: string }>`
 `;
 
 interface IProps {
-    page: Page;
+    pageId: PageId;
 }
 
 interface IState {
@@ -30,13 +31,13 @@ interface IState {
 }
 
 export default class This extends React.Component<IProps> {
-    private static convertPageToColor(page: Page): string {
-        return lighten(backgroundLightness[page], colors[page]);
+    private static convertPageToColor(pageId: PageId): string {
+        return lighten(backgroundLightness[pageId], colors[pageId]);
     }
 
     public state: IState = {
-        color: This.convertPageToColor(Page.About),
-        mask: masks[Page.About],
+        color: This.convertPageToColor(PageId.About),
+        mask: masks[PageId.About],
     };
 
     public render() {
@@ -45,15 +46,15 @@ export default class This extends React.Component<IProps> {
         return <Background color={color} mask={mask} />;
     }
 
-    public componentDidUpdate({ page }: IProps) {
-        if (page !== this.props.page) {
+    public componentDidUpdate({ pageId }: IProps) {
+        if (pageId !== this.props.pageId) {
             this.setState({ color: "transparent" });
 
-            const { page } = this.props;
+            const { pageId } = this.props;
 
             setTimeout(() => this.setState({
-                color: This.convertPageToColor(page),
-                mask: masks[page],
+                color: This.convertPageToColor(pageId),
+                mask: masks[pageId],
             }), transitionMs);
         }
     }

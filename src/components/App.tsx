@@ -2,7 +2,7 @@ import * as React from "react";
 import { connect } from "react-redux";
 import styled from "styled-components";
 
-import { Page } from "../domain";
+import { PageId } from "../domain";
 import * as page from "../state/page";
 import { horizontalMargin } from "../style";
 import AboutPage from "./AboutPage";
@@ -27,11 +27,11 @@ export default class extends React.Component<Partial<page.IState>> {
         return (
             <App>
                 <Menu />
-                <AboutPage active={page === Page.About} />
-                <ProjectsPage active={page === Page.Projects} />
-                <ContributionPage active={page === Page.Contribution} />
-                <SkillsPage active={page === Page.Skills} />
-                <Background page={page} />
+                <AboutPage active={page === PageId.About} />
+                <ProjectsPage active={page === PageId.Projects} />
+                <ContributionPage active={page === PageId.Contribution} />
+                <SkillsPage active={page === PageId.Skills} />
+                <Background pageId={page} />
             </App>
         );
     }

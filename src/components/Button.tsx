@@ -3,9 +3,10 @@ import * as React from "react";
 import { connect } from "react-redux";
 import styled from "styled-components";
 
-import { colors, Page } from "../domain";
+import { PageId } from "../domain";
 import { actionCreators, IActionCreators } from "../state/page";
 import { instantDuration } from "../style";
+import { colors, titles } from "../style/themes";
 
 const Button = styled.button<{ active: boolean, color: string }>`
     display: flex;
@@ -53,19 +54,19 @@ const Label = styled.div`
 interface IProps extends Partial<IActionCreators> {
     active?: boolean;
     icon: JSX.Element;
-    page: Page;
+    pageId: PageId;
 }
 
-@connect((state, props) => ({ active: state.page.page === props.page }), actionCreators)
+@connect((state, props: IProps) => ({ active: state.page.page === props.pageId }), actionCreators)
 export default class extends React.Component<IProps> {
     public render() {
-        const { active, icon, page, setPage } = this.props;
+        const { active, icon, pageId, setPage } = this.props;
 
         return (
-            <Button active={active} color={colors[page]} onClick={() => setPage(page)}>
+            <Button active={active} color={colors[pageId]} onClick={() => setPage(pageId)}>
                 <Pad />
                 <Icon>{icon}</Icon>
-                <Label>{page}</Label>
+                <Label>{titles[pageId]}</Label>
             </Button>
         );
     }

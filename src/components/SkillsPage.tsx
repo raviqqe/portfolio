@@ -1,6 +1,6 @@
 import * as React from "react";
 
-import * as domain from "../domain";
+import { PageId } from "../domain";
 import { Rust } from "../images";
 import Page from "./Page";
 import Tool from "./Tool";
@@ -15,7 +15,7 @@ export default class extends React.Component<IProps> {
         return (
             <Page
                 active={this.props.active}
-                title={domain.Page.Skills}
+                pageId={PageId.Skills}
                 subtitle="my knowledge and ability"
             >
                 <Tools label="Programming Languages">

@@ -1,11 +1,11 @@
 import actionCreatorFactory from "typescript-fsa";
 import { reducerWithInitialState } from "typescript-fsa-reducers";
 
-import { Page } from "../domain";
+import { PageId } from "../domain";
 
 const actionCreator = actionCreatorFactory("PAGE");
 
-const setPage = actionCreator<Page>("SET_PAGE");
+const setPage = actionCreator<PageId>("SET_PAGE");
 
 export const actionCreators = {
     setPage,
@@ -13,7 +13,7 @@ export const actionCreators = {
 
 export type IActionCreators = typeof actionCreators;
 
-export const initialState = { page: Page.About };
+export const initialState = { page: PageId.About };
 
 export type IState = typeof initialState;
 

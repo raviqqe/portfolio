@@ -1,7 +1,7 @@
 import * as React from "react";
 import styled from "styled-components";
 
-import * as domain from "../domain";
+import { PageId } from "../domain";
 import Go = require("../images/go.svg");
 import TensorFlow = require("../images/tensorflow.svg");
 import Link from "./Link";
@@ -28,7 +28,7 @@ export default class extends React.Component<IProps> {
         return (
             <Page
                 active={this.props.active}
-                title={domain.Page.Projects}
+                pageId={PageId.Projects}
                 subtitle="software I've worked on in different languages"
             >
                 <Projects>

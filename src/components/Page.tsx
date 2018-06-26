@@ -1,8 +1,9 @@
 import * as React from "react";
 import styled from "styled-components";
 
-import { Page } from "../domain";
+import { PageId } from "../domain";
 import { horizontalMargin } from "../style";
+import { titles } from "../style/themes";
 import MetaPage from "./MetaPage";
 
 const Titles = styled.div`
@@ -26,18 +27,18 @@ const Subtitle = styled.div`
 
 interface IProps {
     active: boolean;
-    title: string;
+    pageId: PageId;
     subtitle: string;
 }
 
 export default class extends React.Component<IProps> {
     public render() {
-        const { active, children, title, subtitle } = this.props;
+        const { active, children, pageId, subtitle } = this.props;
 
         return (
             <MetaPage active={active}>
                 <Titles>
-                    <Title>{title}</Title>
+                    <Title>{titles[pageId]}</Title>
                     <Subtitle>{subtitle}</Subtitle>
                 </Titles>
                 {children}
