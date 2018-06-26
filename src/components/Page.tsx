@@ -1,6 +1,7 @@
 import * as React from "react";
 import styled from "styled-components";
 
+import { Page } from "../domain";
 import { horizontalMargin } from "../style";
 import MetaPage from "./MetaPage";
 
@@ -24,17 +25,17 @@ const Subtitle = styled.div`
 `;
 
 interface IProps {
-    backgroundImage: string;
+    page: Page;
     title: string;
     subtitle: string;
 }
 
 export default class extends React.Component<IProps> {
     public render() {
-        const { backgroundImage, children, title, subtitle } = this.props;
+        const { children, page, title, subtitle } = this.props;
 
         return (
-            <MetaPage backgroundImage={backgroundImage}>
+            <MetaPage page={page}>
                 <Titles>
                     <Title>{title}</Title>
                     <Subtitle>{subtitle}</Subtitle>

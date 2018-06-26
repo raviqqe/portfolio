@@ -1,13 +1,27 @@
+import { lighten } from "polished";
 import * as React from "react";
 import styled from "styled-components";
 
-const Page = styled.div<{ backgroundImage: string }>`
+import { backgroundLightness, colors, masks, Page } from "../domain";
+
+const MetaPage = styled.div`
+    position: relative;
     display: flex;
     justify-content: center;
     align-items: center;
     flex: 1;
-    background-image: url("${({ backgroundImage }) => backgroundImage}");
-    background-size: cover;
+`;
+
+const Background = styled.div<{ color: string, mask: string }>`
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+    background-color: ${({ color }) => color};
+    mask-image: url("${({ mask }) => mask}");
+    mask-size: cover;
 `;
 
 const Content = styled.div`
@@ -18,19 +32,23 @@ const Content = styled.div`
 `;
 
 interface IProps {
-    backgroundImage: string;
+    page: Page;
 }
 
 export default class extends React.Component<IProps> {
     public render() {
-        const { backgroundImage, children } = this.props;
+        const { children, page } = this.props;
 
         return (
-            <Page backgroundImage={backgroundImage}>
+            <MetaPage>
                 <Content>
-                    {this.props.children}
+                    {children}
                 </Content>
-            </Page>
+                <Background
+                    color={lighten(backgroundLightness[page], colors[page])}
+                    mask={masks[page]}
+                />
+            </MetaPage>
         );
     }
 }

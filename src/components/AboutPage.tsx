@@ -1,8 +1,7 @@
 import * as React from "react";
 import styled from "styled-components";
 
-import * as domain from "../domain";
-import Background = require("../images/about.svg");
+import { Page } from "../domain";
 import Header from "./Header";
 import MetaPage from "./MetaPage";
 import Text from "./Text";
@@ -10,7 +9,7 @@ import Text from "./Text";
 export default class extends React.Component {
     public render() {
         return (
-            <MetaPage backgroundImage={Background}>
+            <MetaPage page={Page.About}>
                 <Header />
                 <Text>
                     I'm a software engineer of full-stack development and

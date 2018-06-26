@@ -1,12 +1,12 @@
 import { shallow } from "enzyme";
 import * as React from "react";
 
-import Background = require("../../images/about.svg");
+import * as domain from "../../domain";
 import Page from "../Page";
 
 test("Render a component", () => {
     shallow(
-        <Page backgroundImage={Background} title="Projects" subtitle="good work." >
+        <Page page={domain.Page.About} title="Projects" subtitle="good work." >
             a statue
         </Page>,
     );
