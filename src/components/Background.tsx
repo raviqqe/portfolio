@@ -5,7 +5,7 @@ import styled from "styled-components";
 import { PageId } from "../domain";
 import { backgroundLightness, colors, masks } from "../style/themes";
 
-const transitionMs = 300;
+const transitionMs = 200;
 
 const Background = styled.div<{ color: string, mask: string }>`
     position: fixed;
