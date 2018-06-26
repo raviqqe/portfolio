@@ -10,9 +10,9 @@ test("Set a current page", async () => {
     const store = createStore();
     expect(getState(store)).toEqual(initialState);
 
-    store.dispatch(actionCreators.setPage(PageId.Projects));
-    expect(getState(store)).toEqual({ page: PageId.Projects });
+    store.dispatch(actionCreators.setCurrentPageId(PageId.Projects));
+    expect(getState(store)).toEqual({ currentPageId: PageId.Projects });
 
-    store.dispatch(actionCreators.setPage(PageId.Contribution));
-    expect(getState(store)).toEqual({ page: PageId.Contribution });
+    store.dispatch(actionCreators.setCurrentPageId(PageId.Contribution));
+    expect(getState(store)).toEqual({ currentPageId: PageId.Contribution });
 });

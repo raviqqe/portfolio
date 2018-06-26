@@ -22,16 +22,16 @@ const App = styled.div`
 @connect(({ page }) => page)
 export default class extends React.Component<Partial<page.IState>> {
     public render() {
-        const { page } = this.props;
+        const { currentPageId } = this.props;
 
         return (
             <App>
                 <Menu />
-                <AboutPage active={page === PageId.About} />
-                <ProjectsPage active={page === PageId.Projects} />
-                <ContributionPage active={page === PageId.Contribution} />
-                <SkillsPage active={page === PageId.Skills} />
-                <Background pageId={page} />
+                <AboutPage active={currentPageId === PageId.About} />
+                <ProjectsPage active={currentPageId === PageId.Projects} />
+                <ContributionPage active={currentPageId === PageId.Contribution} />
+                <SkillsPage active={currentPageId === PageId.Skills} />
+                <Background pageId={currentPageId} />
             </App>
         );
     }

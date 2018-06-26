@@ -5,17 +5,17 @@ import { PageId } from "../domain";
 
 const actionCreator = actionCreatorFactory("PAGE");
 
-const setPage = actionCreator<PageId>("SET_PAGE");
+const setCurrentPageId = actionCreator<PageId>("SET_CURRENT_PAGE_ID");
 
 export const actionCreators = {
-    setPage,
+    setCurrentPageId,
 };
 
 export type IActionCreators = typeof actionCreators;
 
-export const initialState = { page: PageId.About };
+export const initialState = { currentPageId: PageId.About };
 
 export type IState = typeof initialState;
 
 export const reducer = reducerWithInitialState(initialState)
-    .case(actionCreators.setPage, (_, page) => ({ page }));
+    .case(actionCreators.setCurrentPageId, (_, currentPageId) => ({ currentPageId }));

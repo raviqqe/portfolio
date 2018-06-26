@@ -26,5 +26,5 @@ test("Set a page", () => {
 
     element.simulate("click");
 
-    expect(store.getState().page.page).toBe(PageId.Projects);
+    expect(store.getState().page.currentPageId).toBe(PageId.Projects);
 });
