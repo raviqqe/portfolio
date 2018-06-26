@@ -3,6 +3,7 @@ import * as React from "react";
 import styled from "styled-components";
 
 import { backgroundLightness, colors, masks, Page } from "../domain";
+import SocialMediaLinks from "./SocialMediaLinks";
 
 const MetaPage = styled.div`
     position: relative;
@@ -44,6 +45,7 @@ export default class extends React.Component<IProps> {
                 <Content>
                     {children}
                 </Content>
+                <SocialMediaLinks />
                 <Background
                     color={lighten(backgroundLightness[page], colors[page])}
                     mask={masks[page]}
