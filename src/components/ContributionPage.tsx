@@ -75,7 +75,7 @@ export default class extends React.Component<IProps> {
                         recursive asynchronous functions.
                     </Project>
                     <Project
-                        href="https://github.com/Linuxbrew/homebrew-core"
+                        href="https://linuxbrew.sh"
                         image={Linuxbrew}
                         imagePercentage={90}
                         name="Linuxbrew"
