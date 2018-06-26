@@ -6,7 +6,7 @@ import Page from "../Page";
 
 test("Render a component", () => {
     shallow(
-        <Page page={domain.Page.About} title="Projects" subtitle="good work." >
+        <Page active={true} page={domain.Page.About} title="Projects" subtitle="good work." >
             a statue
         </Page>,
     );

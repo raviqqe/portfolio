@@ -5,9 +5,10 @@ import styled from "styled-components";
 import { backgroundLightness, colors, masks, Page } from "../domain";
 import SocialMediaLinks from "./SocialMediaLinks";
 
-const MetaPage = styled.div`
+const MetaPage = styled.div<{ active: boolean }>`
     flex: 1;
     overflow: auto;
+    display: ${({ active }) => active ? "unset" : "none"};
 `;
 
 const Background = styled.div<{ color: string, mask: string }>`
@@ -37,15 +38,16 @@ const Wrapper = styled.div`
 `;
 
 interface IProps {
+    active: boolean;
     page: Page;
 }
 
 export default class extends React.Component<IProps> {
     public render() {
-        const { children, page } = this.props;
+        const { active, children, page } = this.props;
 
         return (
-            <MetaPage>
+            <MetaPage active={active}>
                 <Content>
                     <Wrapper>
                         {children}

@@ -4,5 +4,5 @@ import * as React from "react";
 import AboutPage from "../AboutPage";
 
 test("Render a component", () => {
-    shallow(<AboutPage />);
+    shallow(<AboutPage active={true} />);
 });

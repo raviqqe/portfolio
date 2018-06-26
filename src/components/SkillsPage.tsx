@@ -6,10 +6,15 @@ import Page from "./Page";
 import Tool from "./Tool";
 import Tools from "./Tools";
 
-export default class extends React.Component {
+interface IProps {
+    active: boolean;
+}
+
+export default class extends React.Component<IProps> {
     public render() {
         return (
             <Page
+                active={this.props.active}
                 page={domain.Page.Skills}
                 title={domain.Page.Skills}
                 subtitle="my knowledge and ability"

@@ -19,10 +19,15 @@ const Projects = styled.div`
     }
 `;
 
-export default class extends React.Component {
+interface IProps {
+    active: boolean;
+}
+
+export default class extends React.Component<IProps> {
     public render() {
         return (
             <Page
+                active={this.props.active}
                 page={domain.Page.Contribution}
                 title={domain.Page.Contribution}
                 subtitle="activities for OSS projects and communities"

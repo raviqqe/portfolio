@@ -25,6 +25,7 @@ const Subtitle = styled.div`
 `;
 
 interface IProps {
+    active: boolean;
     page: Page;
     title: string;
     subtitle: string;
@@ -32,10 +33,10 @@ interface IProps {
 
 export default class extends React.Component<IProps> {
     public render() {
-        const { children, page, title, subtitle } = this.props;
+        const { active, children, page, title, subtitle } = this.props;
 
         return (
-            <MetaPage page={page}>
+            <MetaPage active={active} page={page}>
                 <Titles>
                     <Title>{title}</Title>
                     <Subtitle>{subtitle}</Subtitle>

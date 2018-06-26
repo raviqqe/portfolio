@@ -6,10 +6,14 @@ import Header from "./Header";
 import MetaPage from "./MetaPage";
 import Text from "./Text";
 
-export default class extends React.Component {
+interface IProps {
+    active: boolean;
+}
+
+export default class extends React.Component<IProps> {
     public render() {
         return (
-            <MetaPage page={Page.About}>
+            <MetaPage active={this.props.active} page={Page.About}>
                 <Header />
                 <Text>
                     I'm a software engineer of full-stack development and

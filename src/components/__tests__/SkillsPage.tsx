@@ -4,5 +4,5 @@ import * as React from "react";
 import SkillsPage from "../SkillsPage";
 
 test("Render a component", () => {
-    shallow(<SkillsPage />);
+    shallow(<SkillsPage active={true} />);
 });
