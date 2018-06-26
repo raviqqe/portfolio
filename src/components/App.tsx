@@ -6,6 +6,7 @@ import { Page } from "../domain";
 import * as page from "../state/page";
 import { horizontalMargin } from "../style";
 import AboutPage from "./AboutPage";
+import Background from "./Background";
 import ContributionPage from "./ContributionPage";
 import Header from "./Header";
 import Menu from "./Menu";
@@ -30,6 +31,7 @@ export default class extends React.Component<Partial<page.IState>> {
                 <ProjectsPage active={page === Page.Projects} />
                 <ContributionPage active={page === Page.Contribution} />
                 <SkillsPage active={page === Page.Skills} />
+                <Background page={page} />
             </App>
         );
     }

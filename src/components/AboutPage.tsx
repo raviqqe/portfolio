@@ -1,7 +1,5 @@
 import * as React from "react";
-import styled from "styled-components";
 
-import { Page } from "../domain";
 import Header from "./Header";
 import MetaPage from "./MetaPage";
 import Text from "./Text";
@@ -13,7 +11,7 @@ interface IProps {
 export default class extends React.Component<IProps> {
     public render() {
         return (
-            <MetaPage active={this.props.active} page={Page.About}>
+            <MetaPage active={this.props.active}>
                 <Header />
                 <Text>
                     I'm a software engineer of full-stack development and

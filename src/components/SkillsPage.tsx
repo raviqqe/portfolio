@@ -15,7 +15,6 @@ export default class extends React.Component<IProps> {
         return (
             <Page
                 active={this.props.active}
-                page={domain.Page.Skills}
                 title={domain.Page.Skills}
                 subtitle="my knowledge and ability"
             >

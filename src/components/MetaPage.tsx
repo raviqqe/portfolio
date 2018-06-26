@@ -1,26 +1,12 @@
-import { lighten } from "polished";
 import * as React from "react";
 import styled from "styled-components";
 
-import { backgroundLightness, colors, masks, Page } from "../domain";
 import SocialMediaLinks from "./SocialMediaLinks";
 
 const MetaPage = styled.div<{ active: boolean }>`
     flex: 1;
     overflow: auto;
     display: ${({ active }) => active ? "unset" : "none"};
-`;
-
-const Background = styled.div<{ color: string, mask: string }>`
-    position: fixed;
-    left: 0;
-    top: 0;
-    z-index: -1;
-    width: 100vw;
-    height: 100vh;
-    background-color: ${({ color }) => color};
-    mask-image: url("${({ mask }) => mask}");
-    mask-size: cover;
 `;
 
 const Content = styled.div`
@@ -39,12 +25,11 @@ const Wrapper = styled.div`
 
 interface IProps {
     active: boolean;
-    page: Page;
 }
 
 export default class extends React.Component<IProps> {
     public render() {
-        const { active, children, page } = this.props;
+        const { active, children } = this.props;
 
         return (
             <MetaPage active={active}>
@@ -54,10 +39,6 @@ export default class extends React.Component<IProps> {
                     </Wrapper>
                 </Content>
                 <SocialMediaLinks />
-                <Background
-                    color={lighten(backgroundLightness[page], colors[page])}
-                    mask={masks[page]}
-                />
             </MetaPage>
         );
     }
