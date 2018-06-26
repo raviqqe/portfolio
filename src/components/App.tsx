@@ -22,7 +22,7 @@ const App = styled.div`
 @connect(({ page }) => page)
 export default class extends React.Component<Partial<page.IState>> {
     public render() {
-        const { currentPageId } = this.props;
+        const { currentPageId, nextPageId } = this.props;
 
         return (
             <App>
@@ -31,7 +31,7 @@ export default class extends React.Component<Partial<page.IState>> {
                 <ProjectsPage active={currentPageId === PageId.Projects} />
                 <ContributionPage active={currentPageId === PageId.Contribution} />
                 <SkillsPage active={currentPageId === PageId.Skills} />
-                <Background pageId={currentPageId} />
+                <Background pageId={nextPageId || currentPageId} />
             </App>
         );
     }

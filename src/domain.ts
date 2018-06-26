@@ -1,5 +1,5 @@
 export enum PageId {
-    About,
+    About = 1,
     Projects,
     Contribution,
     Skills,

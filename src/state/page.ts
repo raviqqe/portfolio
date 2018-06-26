@@ -6,16 +6,25 @@ import { PageId } from "../domain";
 const actionCreator = actionCreatorFactory("PAGE");
 
 const setCurrentPageId = actionCreator<PageId>("SET_CURRENT_PAGE_ID");
+const setNextPageId = actionCreator<PageId | null>("SET_NEXT_PAGE_ID");
 
 export const actionCreators = {
     setCurrentPageId,
+    setNextPageId,
 };
 
 export type IActionCreators = typeof actionCreators;
 
-export const initialState = { currentPageId: PageId.About };
+export interface IState {
+    currentPageId: PageId;
+    nextPageId: PageId | null;
+}
 
-export type IState = typeof initialState;
+export const initialState: IState = {
+    currentPageId: PageId.About,
+    nextPageId: null,
+};
 
 export const reducer = reducerWithInitialState(initialState)
-    .case(actionCreators.setCurrentPageId, (_, currentPageId) => ({ currentPageId }));
+    .case(actionCreators.setCurrentPageId, (state, currentPageId) => ({ ...state, currentPageId }))
+    .case(actionCreators.setNextPageId, (state, nextPageId) => ({ ...state, nextPageId }));

@@ -59,13 +59,20 @@ interface IProps extends Partial<IActionCreators> {
 
 @connect(
     (state, props: IProps) => ({ active: state.page.currentPageId === props.pageId }),
-    actionCreators)
+    actionCreators,
+)
 export default class extends React.Component<IProps> {
     public render() {
-        const { active, icon, pageId, setCurrentPageId } = this.props;
+        const { active, icon, pageId, setCurrentPageId, setNextPageId } = this.props;
 
         return (
-            <Button active={active} color={colors[pageId]} onClick={() => setCurrentPageId(pageId)}>
+            <Button
+                active={active}
+                color={colors[pageId]}
+                onClick={() => setCurrentPageId(pageId)}
+                onMouseEnter={() => setNextPageId(pageId)}
+                onMouseLeave={() => setNextPageId(null)}
+            >
                 <Pad />
                 <Icon>{icon}</Icon>
                 <Label>{titles[pageId]}</Label>
