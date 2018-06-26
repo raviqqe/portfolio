@@ -6,30 +6,34 @@ import { backgroundLightness, colors, masks, Page } from "../domain";
 import SocialMediaLinks from "./SocialMediaLinks";
 
 const MetaPage = styled.div`
-    position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: center;
     flex: 1;
+    overflow: auto;
 `;
 
 const Background = styled.div<{ color: string, mask: string }>`
-    position: absolute;
+    position: fixed;
     left: 0;
     top: 0;
     z-index: -1;
-    width: 100%;
-    height: 100%;
+    width: 100vw;
+    height: 100vh;
     background-color: ${({ color }) => color};
     mask-image: url("${({ mask }) => mask}");
     mask-size: cover;
 `;
 
 const Content = styled.div`
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+`;
+
+const Wrapper = styled.div`
     padding: 3em 4em;
+    padding-right: 5em;
     max-width: 60em;
-    max-height: 100%;
-    overflow: auto;
 `;
 
 interface IProps {
@@ -43,7 +47,9 @@ export default class extends React.Component<IProps> {
         return (
             <MetaPage>
                 <Content>
-                    {children}
+                    <Wrapper>
+                        {children}
+                    </Wrapper>
                 </Content>
                 <SocialMediaLinks />
                 <Background
