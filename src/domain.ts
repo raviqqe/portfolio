@@ -4,3 +4,10 @@ export enum Page {
     Contribution = "contribution",
     Skills = "skills",
 }
+
+export const colors = {
+    [Page.About]: "darkorange",
+    [Page.Projects]: "firebrick",
+    [Page.Contribution]: "steelblue",
+    [Page.Skills]: "olivedrab",
+};

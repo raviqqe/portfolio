@@ -3,7 +3,7 @@ import * as React from "react";
 import { connect } from "react-redux";
 import styled from "styled-components";
 
-import { Page } from "../domain";
+import { colors, Page } from "../domain";
 import { actionCreators, IActionCreators } from "../state/page";
 import { instantDuration } from "../style";
 
@@ -52,7 +52,6 @@ const Label = styled.div`
 
 interface IProps extends Partial<IActionCreators> {
     active?: boolean;
-    color: string;
     icon: JSX.Element;
     page: Page;
 }
@@ -60,10 +59,10 @@ interface IProps extends Partial<IActionCreators> {
 @connect((state, props) => ({ active: state.page.page === props.page }), actionCreators)
 export default class extends React.Component<IProps> {
     public render() {
-        const { active, color, icon, page, setPage } = this.props;
+        const { active, icon, page, setPage } = this.props;
 
         return (
-            <Button active={active} color={color || "black"} onClick={() => setPage(page)}>
+            <Button active={active} color={colors[page]} onClick={() => setPage(page)}>
                 <Pad />
                 <Icon>{icon}</Icon>
                 <Label>{page}</Label>
