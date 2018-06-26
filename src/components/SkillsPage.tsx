@@ -51,6 +51,9 @@ export default class extends React.Component<IProps> {
                     <Tool image={require("../images/tensorflow.svg")}>
                         TensorFlow
                     </Tool>
+                    <Tool image={require("devicon/icons/nodejs/nodejs-original.svg")}>
+                        Node.js
+                    </Tool>
                     <Tool image={require("devicon/icons/jquery/jquery-original.svg")}>
                         jQuery
                     </Tool>
@@ -67,9 +70,6 @@ export default class extends React.Component<IProps> {
                     </Tool>
                     <Tool image={require("devicon/icons/vim/vim-original.svg")}>
                         Vim
-                    </Tool>
-                    <Tool image={require("devicon/icons/nodejs/nodejs-original.svg")}>
-                        Node.js
                     </Tool>
                     <Tool image={require("devicon/icons/webpack/webpack-original.svg")}>
                         Webpack
