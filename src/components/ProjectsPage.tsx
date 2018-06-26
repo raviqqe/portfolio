@@ -3,6 +3,7 @@ import styled from "styled-components";
 
 import * as domain from "../domain";
 import Go = require("../images/go.svg");
+import Background = require("../images/projects.svg");
 import TensorFlow = require("../images/tensorflow.svg");
 import Link from "./Link";
 import Page from "./Page";
@@ -23,6 +24,7 @@ export default class extends React.Component {
     public render() {
         return (
             <Page
+                backgroundImage={Background}
                 title={domain.Page.Projects}
                 subtitle="software I've worked on in different languages"
             >

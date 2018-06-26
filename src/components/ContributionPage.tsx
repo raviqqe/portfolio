@@ -3,6 +3,7 @@ import styled from "styled-components";
 
 import * as domain from "../domain";
 import { Linuxbrew, Rust } from "../images";
+import Background = require("../images/contribution.svg");
 import TensorFlow = require("../images/tensorflow.svg");
 import Link from "./Link";
 import Page from "./Page";
@@ -23,6 +24,7 @@ export default class extends React.Component {
     public render() {
         return (
             <Page
+                backgroundImage={Background}
                 title={domain.Page.Contribution}
                 subtitle="activities for OSS projects and communities"
             >
@@ -88,7 +90,7 @@ export default class extends React.Component {
                 </Projects>
                 <Text>
                     Please visit <Link href="https://github.com/raviqqe">my GitHub profile</Link>
-                    {" "}to see more of my contirubtion and OSS activities.
+                    {" "}to see more of my contribution and OSS activities.
                 </Text>
             </Page>
         );

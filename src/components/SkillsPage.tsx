@@ -2,6 +2,7 @@ import * as React from "react";
 
 import * as domain from "../domain";
 import { Rust } from "../images";
+import Background = require("../images/skills.svg");
 import Page from "./Page";
 import Tool from "./Tool";
 import Tools from "./Tools";
@@ -10,6 +11,7 @@ export default class extends React.Component {
     public render() {
         return (
             <Page
+                backgroundImage={Background}
                 title={domain.Page.Skills}
                 subtitle="my knowledge and ability"
             >

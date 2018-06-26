@@ -1,11 +1,13 @@
 import * as React from "react";
 import styled from "styled-components";
 
-const Page = styled.div`
+const Page = styled.div<{ backgroundImage: string }>`
     display: flex;
     justify-content: center;
     align-items: center;
     flex: 1;
+    background-image: url("${({ backgroundImage }) => backgroundImage}");
+    background-size: cover;
 `;
 
 const Content = styled.div`
@@ -15,10 +17,16 @@ const Content = styled.div`
     overflow: auto;
 `;
 
-export default class extends React.Component {
+interface IProps {
+    backgroundImage: string;
+}
+
+export default class extends React.Component<IProps> {
     public render() {
+        const { backgroundImage, children } = this.props;
+
         return (
-            <Page>
+            <Page backgroundImage={backgroundImage}>
                 <Content>
                     {this.props.children}
                 </Content>

@@ -24,16 +24,17 @@ const Subtitle = styled.div`
 `;
 
 interface IProps {
+    backgroundImage: string;
     title: string;
     subtitle: string;
 }
 
 export default class extends React.Component<IProps> {
     public render() {
-        const { children, title, subtitle } = this.props;
+        const { backgroundImage, children, title, subtitle } = this.props;
 
         return (
-            <MetaPage>
+            <MetaPage backgroundImage={backgroundImage}>
                 <Titles>
                     <Title>{title}</Title>
                     <Subtitle>{subtitle}</Subtitle>
