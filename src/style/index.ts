@@ -1,6 +1,7 @@
 import { css, injectGlobal, InterpolationValue } from "styled-components";
 
 export const instantDuration = "0.05s";
+export const shortDuration = "0.1s";
 
 injectGlobal`
     @import url('https://fonts.googleapis.com/css?family=Khand');
