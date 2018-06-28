@@ -1,6 +1,8 @@
 import * as React from "react";
+import { connect } from "react-redux";
 import styled from "styled-components";
 
+import * as environment from "../state/environment";
 import SocialMediaLinks from "./SocialMediaLinks";
 
 const MetaPage = styled.div<{ active: boolean }>`
@@ -17,28 +19,29 @@ const Content = styled.div`
     align-items: center;
 `;
 
-const Wrapper = styled.div`
+const Wrapper = styled.div<{ smallWindow: boolean }>`
     padding: 3em 4em;
-    padding-right: 5em;
+    ${({ smallWindow }) => smallWindow ? "" : "padding-right: 5em;"}
     max-width: 60em;
 `;
 
-interface IProps {
+interface IProps extends Partial<environment.IState> {
     active: boolean;
 }
 
+@connect(({ environment }) => environment)
 export default class extends React.Component<IProps> {
     public render() {
-        const { active, children } = this.props;
+        const { active, children, smallWindow } = this.props;
 
         return (
             <MetaPage active={active}>
                 <Content>
-                    <Wrapper>
+                    <Wrapper smallWindow={smallWindow}>
                         {children}
                     </Wrapper>
                 </Content>
-                <SocialMediaLinks />
+                {!smallWindow && <SocialMediaLinks />}
             </MetaPage>
         );
     }

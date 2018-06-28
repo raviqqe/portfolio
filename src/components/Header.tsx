@@ -1,7 +1,10 @@
 import * as React from "react";
+import { connect } from "react-redux";
 import styled from "styled-components";
 
+import * as environment from "../state/environment";
 import { horizontalMargin } from "../style";
+import SocialMediaLinks from "./SocialMediaLinks";
 
 const Header = styled.div`
     ${horizontalMargin("0.5em")}
@@ -22,12 +25,16 @@ const Description = styled.div`
     margin-bottom: 0.5em;
 `;
 
-export default class extends React.Component {
+@connect(({ environment }) => environment)
+export default class extends React.Component<Partial<environment.IState>> {
     public render() {
+        const { smallWindow } = this.props;
+
         return (
             <Header>
                 <Name>Yota Toyama</Name>
                 <Description>Full-stack developer and AI enthusiast</Description>
+                {smallWindow && <SocialMediaLinks />}
             </Header>
         );
     }
