@@ -1,9 +1,10 @@
 import { shallow } from "enzyme";
 import * as React from "react";
-import Add = require("react-icons/lib/md/add");
+import { Provider } from "react-redux";
 
+import createStore from "../../state";
 import SocialMediaLinks from "../SocialMediaLinks";
 
 test("Render a component", () => {
-    shallow(<SocialMediaLinks />);
+    shallow(<Provider store={createStore()}><SocialMediaLinks /></Provider>);
 });
