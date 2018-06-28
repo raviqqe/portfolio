@@ -20,7 +20,7 @@ const Content = styled.div`
 `;
 
 const Wrapper = styled.div<{ smallWindow: boolean }>`
-    padding: 3em 4em;
+    padding: ${({ smallWindow }) => smallWindow ? "1.5em" : "3em 4em"};
     ${({ smallWindow }) => smallWindow ? "padding-bottom: 6em;" : "padding-right: 5em;"}
     max-width: 60em;
 `;

@@ -7,7 +7,7 @@ import Link from "./Link";
 import Text from "./Text";
 
 const Project = styled.div`
-    width: 16em;
+    max-width: 16em;
     display: flex;
     flex-direction: column;
     align-items: center;
