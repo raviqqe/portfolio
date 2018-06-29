@@ -7,10 +7,13 @@ import { titles } from "../style/themes";
 import MetaPage from "./MetaPage";
 
 const Titles = styled.div`
-    ${horizontalMargin("0.6em")}
     display: flex;
     flex-wrap: wrap;
     align-items: flex-end;
+
+    @media (min-width: 320px) {
+        ${horizontalMargin("0.6em")}
+    }
 `;
 
 const Title = styled.h2`
