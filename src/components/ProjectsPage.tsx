@@ -49,7 +49,7 @@ export default class extends React.Component<IProps> {
                         of Haskell which relates to its parallelism and concurrency.
                     </Project>
                     <Project
-                        href="https://tasks.code2d.org"
+                        href="https://github.com/raviqqe/tasks"
                         image="https://tasks.code2d.org/icon512.png"
                         imagePercentage={90}
                         name="Pomodoro Tasks"
