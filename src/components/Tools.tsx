@@ -4,10 +4,12 @@ import styled from "styled-components";
 const Tools = styled.div`
     display: flex;
     flex-direction: column;
+    margin: 0.5em 0;
 `;
 
 const Label = styled.h4`
     font-size: 2em;
+    line-height: 1.2;
     margin: 0;
 `;
 

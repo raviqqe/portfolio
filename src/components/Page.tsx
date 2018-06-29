@@ -25,6 +25,7 @@ const Title = styled.h2`
 
 const Subtitle = styled.div`
     font-size: 1.5em;
+    line-height: 1.2;
     margin-bottom: 0.4em;
 `;
 
